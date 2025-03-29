@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hot Dog do Seu Angelo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #d62828;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #d62828;
+    }
+    .instagram {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .instagram a {
+      text-decoration: none;
+      color: #d62828;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hot Dog do Seu Angelo</h1>
+    <p>O simples bem feito!</p>
+  </header>
+
+  <section>
+    <h2>Quem Somos</h2>
+    <p>
+      Somos especialistas em levar uma experiência única para os colaboradores da sua empresa. O Hot Dog do Seu Angelo oferece um carrinho tradicional, hot dogs feitos na hora e aquele clima gostoso que só um lanche bem feito pode trazer.
+    </p>
+  </section>
+
+  <section>
+    <h2>O que Oferecemos</h2>
+    <p>
+      Levamos nosso carrinho até o seu evento corporativo, com tudo incluso: ingredientes frescos, atendimento simpático e uma experiência inesquecível. Pacote mínimo de 400 hot dogs, com possibilidade de personalização e divulgação da sua marca no evento.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contato</h2>
+    <p>Quer levar essa experiência para sua empresa? Fale com a gente:</p>
+    <div class="instagram">
+      <p>Instagram: <a href="https://instagram.com/hotdogdoseuangelo" target="_blank">@hotdogdoseuangelo</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Hot Dog do Seu Angelo. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
