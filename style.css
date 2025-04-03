@@ -6,14 +6,14 @@ body {
 }
 
 header {
-  background-color: royalblue;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  background-color: transparent;
+  position: absolute; /* ou fixed, se quiser que ele fique colado no topo mesmo rolando a página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* garante que fique por cima do conteúdo */
 }
+
 
 .logo img {
   height: 100px;
