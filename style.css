@@ -76,6 +76,18 @@ nav ul li a:hover {
 .conteudo-banner p {
   font-size: 1.2rem;
 }
+
+.btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 .sessao-texto-imagem {
   display: flex;
   flex-wrap: wrap;
@@ -111,18 +123,6 @@ nav ul li a:hover {
 .sessao-texto-imagem .imagem img {
   max-width: 100%;
   border-radius: 12px;
-}
-
-.btn {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #ffd700;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
 }
 
 .btn:hover {
