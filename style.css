@@ -23,7 +23,7 @@
 
   <section class="banner-topo">
   .banner-topo {
-  background-image: url('sua-imagem.jpg'); /* troca pelo nome do seu arquivo */
+  background-image: url('banner.jpg'); /* troca pelo nome do seu arquivo */
   background-size: cover;
   background-position: center;
   height: 100vh; /* ocupa a altura inteira da tela */
