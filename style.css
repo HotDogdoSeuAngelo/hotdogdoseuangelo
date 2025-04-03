@@ -22,7 +22,6 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  border-bottom: 1px solid white;
   z-index: 1000;
 }
 .logo {
