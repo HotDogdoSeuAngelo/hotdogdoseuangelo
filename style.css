@@ -1,91 +1,102 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hot Dog do Seu Ângelo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="logo.jpg" alt="Logo Hot Dog do Seu Ângelo" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Serviços</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <section class="banner-topo">
-  .banner-topo {
-  background-image: url('banner.jpg'); /* troca pelo nome do seu arquivo */
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* CABEÇALHO */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* BANNER TOPO */
+.banner-topo {
+  background-image: url('banner.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* ocupa a altura inteira da tela */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
-  color: white; /* se a imagem for escura */
+  color: white;
 }
 
 .conteudo-banner {
-  background: rgba(0, 0, 0, 0.5); /* fundo transparente por cima da imagem */
-  padding: 2rem;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  border-radius: 12px;
 }
 
-    <div class="conteudo-banner">
-      <h1>O simples bem feito!</h1>
-      <p>Leve uma experiência retrô e afetiva para seus colaboradores.</p>
-      <a href="#contato" class="btn">Agendar Evento</a>
-    </div>
-  </section>
+.conteudo-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-  <main>
-    <section class="servicos">
-      <h2>O que oferecemos</h2>
-      <div class="grid">
-        <div class="item">
-          <img src="carrinho.jpg" alt="Carrinho de Hot Dog" />
-          <p>Carrinho retrô estilizado no local</p>
-        </div>
-        <div class="item">
-          <img src="hotdogs.jpg" alt="Hot Dogs" />
-          <p>Hot Dogs clássicos e deliciosos</p>
-        </div>
-        <div class="item">
-          <img src="evento.jpg" alt="Evento em empresa" />
-          <p>Experiência afetiva pro seu time</p>
-        </div>
-      </div>
-    </section>
+.conteudo-banner p {
+  font-size: 1.2rem;
+}
 
-    <section class="sobre">
-      <h2>Sobre Nós</h2>
-      <p>Há 63 anos, o Hot Dog do Seu Ângelo leva sabor e carinho em cada lanche. Hoje, a tradição continua encantando eventos corporativos com um atendimento especial e inesquecível.</p>
-    </section>
+.btn {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffd700;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
 
-    <section class="contato" id="contato">
-      <h2>Entre em Contato</h2>
-      <form>
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-      <p>Ou fale direto no WhatsApp: <a href="https://wa.me/5511988825316" target="_blank">(11) 98882-5316</a></p>
-    </section>
-  </main>
+.btn:hover {
+  background-color: #e6b800;
+}
 
-  <footer>
-    <p>&copy; 2025 Hot Dog do Seu Ângelo - Todos os direitos reservados</p>
-  </footer>
-</body>
-</html>
+/* RODAPÉ */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
