@@ -23,6 +23,15 @@ header {
   align-items: center;
   background-color: transparent;
   z-index: 1000;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+header.scrolled {
+  background-color: white; /* muda aqui se quiser outra cor */
+  border-bottom: 1px solid #ccc;
+}
+
+header.scrolled nav ul li a {
+  color: black; /* cor dos links no cabeçalho com fundo branco */
 }
 .logo {
   display: flex;
