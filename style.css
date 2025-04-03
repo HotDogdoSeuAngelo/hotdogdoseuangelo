@@ -7,12 +7,31 @@ body {
 
 header {
   background-color: transparent;
-  position: absolute; /* ou fixed, se quiser que ele fique colado no topo mesmo rolando a página */
+  position: fixed; /* ou fixed, se quiser que ele fique colado no topo mesmo rolando a página */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; /* garante que fique por cima do conteúdo */
 }
+.banner-topo {
+  background-image: url('sua-imagem.jpg'); /* troca pelo nome do seu arquivo */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* ocupa a altura inteira da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white; /* se a imagem for escura */
+}
+
+.conteudo-banner {
+  background: rgba(0, 0, 0, 0.5); /* fundo transparente por cima da imagem */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
 
 
 .logo img {
