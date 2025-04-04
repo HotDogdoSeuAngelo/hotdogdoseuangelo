@@ -26,12 +26,14 @@ header {
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
 }
 header.scrolled {
-  background-color: black; /* muda aqui se quiser outra cor */
+  background-color: rgba(255, 255, 255, 0.85); /* branco com transparência */
   border-bottom: 1px solid #ccc;
+  backdrop-filter: blur(5px); /* efeito vidro fosco */
+  -webkit-backdrop-filter: blur(5px); /* pra funcionar no Safari também */
 }
 
 header.scrolled nav ul li a {
-  color: white; /* cor dos links no cabeçalho com fundo branco */
+  color: black; /* cor dos links no cabeçalho com fundo branco */
 }
 .logo {
   display: flex;
@@ -42,6 +44,10 @@ header.scrolled nav ul li a {
 .logo img {
   width: 180px;
   height: auto;
+  transition: widh 0.3s ease;
+}
+header.scrolled .logo img {
+  width: 120px;
 }
 
 .linha-branca {
