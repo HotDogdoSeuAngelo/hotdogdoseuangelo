@@ -50,7 +50,7 @@ html {
 .logo img {
   width: 180px;
   height: auto;
-  transition: widh 0.3s ease;
+  transition: width 0.3s ease;
 }
 header.scrolled .logo img {
   width: 120px;
