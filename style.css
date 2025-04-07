@@ -37,6 +37,10 @@ header.scrolled {
 header.scrolled nav ul li a {
   color: white; /* cor dos links no cabeçalho com fundo branco */
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .logo {
   display: flex;
   flex-direction: column;
