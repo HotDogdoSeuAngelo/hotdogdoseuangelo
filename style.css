@@ -170,6 +170,30 @@ nav ul li a {
   max-width: 100%;
   border-radius: 12px;
 }
+.bloco-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bloco-horizontal .texto,
+.bloco-horizontal .imagem {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+.bloco-horizontal .imagem img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
 .bloco-horizontal .imagem img {
   max-width: 100%;
   width: 100%;
