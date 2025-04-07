@@ -138,7 +138,13 @@ nav ul li a {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+@media (max-width: 768px) {
+  .dados .grid,
+  .bloco-imagem,
+  .bloco-horizontal {
+    flex-direction: column;
+  }
+}
 .sessao-texto-imagem .texto {
   flex: 1;
   min-width: 300px;
