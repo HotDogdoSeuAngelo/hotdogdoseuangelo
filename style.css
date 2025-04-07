@@ -33,7 +33,7 @@ header.scrolled {
 }
 
 header.scrolled nav ul li a {
-  color: black; /* cor dos links no cabeçalho com fundo branco */
+  color: white; /* cor dos links no cabeçalho com fundo branco */
 }
 .logo {
   display: flex;
