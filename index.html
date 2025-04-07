@@ -110,9 +110,10 @@
       padding: 5rem 2rem;
       max-width: 1100px;
       margin: 0 auto;
-      text-align: center;
       scroll-margin-top: 100px;
     }
+    section.center { text-align: center; }
+
     h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
@@ -123,14 +124,14 @@
       margin-bottom: 1rem;
     }
 
-    .dados .grid {
+    .dados .grid, .clientes-logos, .bloco-imagem {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
-      margin-top: 2rem;
+      align-items: center;
     }
-    .dados .item {
+    .dados .item, .bloco-imagem .texto {
       flex: 1;
       min-width: 240px;
       background: #f0f8ff;
@@ -141,6 +142,20 @@
     .dados h3 {
       font-size: 2.5rem;
       color: royalblue;
+    }
+
+    .bloco-imagem img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .clientes-logos img {
+      height: 60px;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+    .clientes-logos img:hover {
+      filter: grayscale(0%);
     }
 
     .oferecemos ul {
@@ -179,7 +194,7 @@
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1rem; }
       nav ul { flex-direction: column; align-items: flex-end; }
-      .dados .grid { flex-direction: column; }
+      .dados .grid, .bloco-imagem { flex-direction: column; }
     }
   </style>
   <script>
@@ -203,6 +218,7 @@
         <li><a href="#argumento">Por quê?</a></li>
         <li><a href="#dados">Impacto</a></li>
         <li><a href="#oferecemos">Serviços</a></li>
+        <li><a href="#clientes">Clientes</a></li>
         <li><a href="#orcamento">Agendar</a></li>
       </ul>
     </nav>
@@ -214,9 +230,25 @@
     <a href="#orcamento" class="btn">Quero agendar meu evento</a>
   </section>
 
+  <section class="bloco-imagem">
+    <div class="texto">
+      <h2>Tradição que abraça</h2>
+      <p>Há mais de 60 anos, a gente serve mais do que hot dog: servimos memórias. Cada evento é uma oportunidade de conectar sua equipe com algo que marca.</p>
+    </div>
+    <img src="imagem-tradicao.jpg" alt="Tradição do Hot Dog do Seu Ângelo">
+  </section>
+
+  <section class="bloco-imagem">
+    <img src="imagem-corporativa.jpg" alt="Evento em ambiente corporativo">
+    <div class="texto">
+      <h2>Ambiente leve e produtivo</h2>
+      <p>Quando a empresa se preocupa com o clima organizacional, tudo muda. Nossos eventos criam momentos leves e memoráveis que inspiram o time.</p>
+    </div>
+  </section>
+
   <section class="argumento" id="argumento">
-    <h2>Mais do que um lanche. Um gesto de cuidado.</h2>
-    <p>Hoje, os colaboradores valorizam <strong>saúde mental</strong>, <strong>bem-estar</strong> e <strong>reconhecimento</strong>. Um evento corporativo afetivo mostra que sua empresa está conectada com o que realmente importa: <strong>as pessoas</strong>.</p>
+    <h2 class="center">Mais do que um lanche. Um gesto de cuidado.</h2>
+    <p class="center">Hoje, os colaboradores valorizam <strong>saúde mental</strong>, <strong>bem-estar</strong> e <strong>reconhecimento</strong>. Um evento corporativo afetivo mostra que sua empresa está conectada com o que realmente importa: <strong>as pessoas</strong>.</p>
   </section>
 
   <section class="dados" id="dados">
@@ -245,6 +277,16 @@
       <li>Divulgação da empresa contratante</li>
       <li>Equipe simpática e experiente</li>
     </ul>
+  </section>
+
+  <section class="clientes" id="clientes">
+    <h2 class="center">Empresas que já viveram essa experiência</h2>
+    <div class="clientes-logos">
+      <img src="cliente1.png" alt="Cliente 1">
+      <img src="cliente2.png" alt="Cliente 2">
+      <img src="cliente3.png" alt="Cliente 3">
+      <img src="cliente4.png" alt="Cliente 4">
+    </div>
   </section>
 
   <section class="depoimento">
