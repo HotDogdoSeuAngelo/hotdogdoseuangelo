@@ -81,7 +81,7 @@ nav ul li a:hover {
   background: none;
   border: none;
   color: royalblue;
-  z-index: 2000;
+  z-index: 1001;
 }
 
 /* BANNER TOPO */
