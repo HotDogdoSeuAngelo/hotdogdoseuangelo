@@ -220,6 +220,49 @@
       nav ul { flex-direction: column; align-items: flex-end; }
       .dados .grid, .bloco-horizontal { flex-direction: column; }
     }
+	.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: royalblue;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: white;
+    display: none;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #eee;
+  }
+
+  nav.menu-aberto {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  nav ul li a {
+    color: royalblue;
+    font-size: 1.2rem;
+    text-shadow: none;
+  }
+}
+
   </style>
   <script>
     window.addEventListener('scroll', function () {
@@ -281,7 +324,7 @@
       <img src="logo.jpg" alt="Hot Dog do Seu Ângelo" />
     </div>
 	<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
-    <nav>
+    <nav id="menu-nav">
       <ul>
         <li><a href="#argumento">Por quê?</a></li>
         <li><a href="#dados">Impacto</a></li>
@@ -377,22 +420,33 @@
     <a href="https://wa.me/5511988825316" target="_blank" class="btn-destaque">Agendar evento pelo WhatsApp</a>
   </section>
   <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.getElementById('menu-toggle');
-  const navMenu = document.querySelector('nav ul');
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('menu-nav');
 
-  toggle.addEventListener('click', function () {
-    navMenu.classList.toggle('show');
-  });
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('menu-aberto');
+    });
 
-  // Fecha o menu ao clicar em um link
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('show');
+    // Fecha o menu ao clicar em um link
+    const links = nav.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('menu-aberto');
+      });
     });
   });
-});
+
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('expanded');
+    } else {
+      header.classList.remove('expanded');
+    }
+  });
 </script>
+
 
 
   <footer>
