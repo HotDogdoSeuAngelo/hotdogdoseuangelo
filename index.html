@@ -230,6 +230,49 @@
         header.classList.remove('expanded');
       }
     });
+	@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: royalblue;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-bottom: 1rem;
+  }
+
+  nav ul li a {
+    color: royalblue;
+    font-size: 1.2rem;
+    text-shadow: none;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
   </script>
 </head>
 <body>
@@ -237,7 +280,7 @@
     <div class="logo">
       <img src="logo.jpg" alt="Hot Dog do Seu Ângelo" />
     </div>
-	<button class="menu-toggle" aria-label="Abrir menu">☰</button>
+	<button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">☰</button>
     <nav>
       <ul>
         <li><a href="#argumento">Por quê?</a></li>
@@ -334,14 +377,21 @@
     <a href="https://wa.me/5511988825316" target="_blank" class="btn-destaque">Agendar evento pelo WhatsApp</a>
   </section>
   <script>
-  document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('menu-toggle');
   const navMenu = document.querySelector('nav ul');
 
-  menuToggle.addEventListener('click', function () {
-    navMenu.classList.toggle('active');
+  toggle.addEventListener('click', function () {
+    navMenu.classList.toggle('show');
   });
+
+  // Fecha o menu ao clicar em um link
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+    });
   });
+});
 </script>
 
 
