@@ -14,6 +14,7 @@ body {
   background: #fff;
   color: #222;
   line-height: 1.6;
+  overflow-x: hidden; /* impede rolagem lateral */
 }
 
 /* CABEÇALHO */
@@ -38,33 +39,16 @@ header.scrolled {
   -webkit-backdrop-filter: blur(5px);
 }
 
-header.scrolled nav ul li a {
-  color: white;
-}
-
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .logo img {
   width: 180px;
   height: auto;
   transition: width 0.3s ease;
 }
-
 header.scrolled .logo img {
   width: 120px;
 }
 
-.linha-branca {
-  width: 100%;
-  height: 1px;
-  background-color: white;
-  margin-top: 1px;
-}
-
+/* MENU DESKTOP */
 nav ul {
   display: flex;
   gap: 2rem;
@@ -76,26 +60,28 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
+  font-family: 'Boldonse', cursive;
   text-shadow:
     -1px -1px 0 royalblue,
      1px -1px 0 royalblue,
     -1px  1px 0 royalblue,
      1px  1px 0 royalblue;
-  font-family: 'Boldonse', cursive;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
   color: #ffd700;
 }
 
-/* BOTÃO MENU (MOBILE) */
+/* BOTÃO DE MENU (MOBILE) */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: royalblue;
   background: none;
   border: none;
+  color: royalblue;
+  z-index: 2000;
 }
 
 /* BANNER TOPO */
@@ -108,8 +94,8 @@ nav ul li a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  position: relative;
   color: white;
+  position: relative;
 }
 
 .conteudo-banner {
@@ -127,7 +113,7 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 
-.btn {
+.btn, .btn-destaque {
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
   background-color: #ffd700;
@@ -139,11 +125,11 @@ nav ul li a:hover {
   transition: background 0.3s ease;
 }
 
-.btn:hover {
+.btn:hover, .btn-destaque:hover {
   background-color: #e6b800;
 }
 
-/* TEXTOS COM IMAGENS */
+/* BLOCOS COM IMAGENS E TEXTO */
 .sessao-texto-imagem,
 .bloco-horizontal {
   display: flex;
@@ -156,21 +142,13 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-.sessao-texto-imagem .texto,
 .bloco-horizontal .texto,
 .bloco-horizontal .imagem {
   flex: 1 1 45%;
   min-width: 300px;
 }
 
-.sessao-texto-imagem .imagem,
-.bloco-horizontal .imagem {
-  text-align: center;
-}
-
-.sessao-texto-imagem .imagem img,
 .bloco-horizontal .imagem img {
-  max-width: 100%;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -178,16 +156,12 @@ nav ul li a:hover {
   display: block;
 }
 
-.sessao-texto-imagem .texto h2,
-.bloco-horizontal .texto h2 {
-  font-size: 2.3rem;
-  margin-bottom: 1rem;
-}
-
-.sessao-texto-imagem .texto p,
-.bloco-horizontal .texto p {
-  font-size: 1.4rem;
-  line-height: 1.6;
+/* FOOTER */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 /* MENU MOBILE */
@@ -211,7 +185,6 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 0 0 0 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
   }
 
   nav ul.show {
@@ -224,15 +197,7 @@ nav ul li a:hover {
 
   nav ul li a {
     color: royalblue;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-shadow: none;
   }
-}
-
-/* RODAPÉ */
-footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 2rem;
 }
