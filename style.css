@@ -11,9 +11,7 @@
   position: relative;
   color: white;
 }
-body {
-	background: lime;
-}
+
 .conteudo-banner {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem 3rem;
