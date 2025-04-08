@@ -239,9 +239,9 @@
     <div class="logo">
       <img src="logo.jpg" alt="Hot Dog do Seu Ângelo" />
     </div>
-	<div class="menu-toggle" id="menu-toggle">☰</div>
+	<button class="menu-toggle" aria-label="Abrir menu">☰</button>
     <nav>
-      <ul id="nav-menu">
+      <ul>
         <li><a href="#argumento">Por quê?</a></li>
         <li><a href="#dados">Impacto</a></li>
         <li><a href="#oferecemos">Serviços</a></li>
@@ -336,11 +336,13 @@
     <a href="https://wa.me/5511988825316" target="_blank" class="btn-destaque">Agendar evento pelo WhatsApp</a>
   </section>
   <script>
+  document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('menu-toggle');
   const navMenu = document.querySelector('nav ul');
 
-  toggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
+  menuToggle.addEventListener('click', function () {
+    navMenu.classList.toggle('active');
+  });
   });
 </script>
 
