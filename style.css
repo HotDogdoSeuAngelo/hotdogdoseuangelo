@@ -180,61 +180,6 @@
     text-shadow: none;
   }
 
-.dados-bg {
-  background-image: url('https://hotdogdoseuangelo.vercel.app/cliente-feliz.jpg');
-  background-size: cover !important;
-  background-position: center !important;
-  position: relative;
-  padding: 5rem 2rem;
-  border-radius: 20px;
-  overflow: hidden;
-  min-height: 500px;
-  border: 3px solid red;
-}
-
-
-.dados-bg::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255,255,255,0.6); /* camada branca transparente */
-  backdrop-filter: blur(4px); /* desfoque */
-  z-index: 1;
-}
-
-.conteudo-dados {
-  position: relative;
-  z-index: 2; /* fica por cima do fundo desfocado */
-}
-.conteudo-dados h2 {
-  font-size: 2.5rem;
-  color: royalblue;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.dados .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  z-index: 2;
-}
-
-.dados .item {
-  flex: 1;
-  min-width: 240px;
-  background: #f0f8ff;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-
-
-
-
 
 /* RODAPÉ */
 footer {
