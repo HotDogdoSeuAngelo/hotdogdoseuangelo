@@ -5,12 +5,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Fredoka', sans-serif;
   background: #fff;
   color: #222;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* CABEÇALHO */
@@ -27,6 +30,7 @@ header {
   z-index: 1000;
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
 }
+
 header.scrolled {
   background-color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid #ccc;
@@ -36,10 +40,6 @@ header.scrolled {
 
 header.scrolled nav ul li a {
   color: white;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .logo {
@@ -53,6 +53,7 @@ html {
   height: auto;
   transition: width 0.3s ease;
 }
+
 header.scrolled .logo img {
   width: 120px;
 }
@@ -85,6 +86,16 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ffd700;
+}
+
+/* BOTÃO MENU (MOBILE) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: royalblue;
+  background: none;
+  border: none;
 }
 
 /* BANNER TOPO */
@@ -132,118 +143,65 @@ nav ul li a:hover {
   background-color: #e6b800;
 }
 
-.sessao-texto-imagem {
+/* TEXTOS COM IMAGENS */
+.sessao-texto-imagem,
+.bloco-horizontal {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 4rem 2rem;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.sessao-texto-imagem .texto {
-  flex: 1;
+.sessao-texto-imagem .texto,
+.bloco-horizontal .texto,
+.bloco-horizontal .imagem {
+  flex: 1 1 45%;
   min-width: 300px;
 }
 
-.sessao-texto-imagem .texto h2 {
+.sessao-texto-imagem .imagem,
+.bloco-horizontal .imagem {
+  text-align: center;
+}
+
+.sessao-texto-imagem .imagem img,
+.bloco-horizontal .imagem img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.sessao-texto-imagem .texto h2,
+.bloco-horizontal .texto h2 {
   font-size: 2.3rem;
   margin-bottom: 1rem;
 }
 
-.sessao-texto-imagem .texto p {
+.sessao-texto-imagem .texto p,
+.bloco-horizontal .texto p {
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
-.sessao-texto-imagem .imagem {
-  flex: 1;
-  min-width: 300px;
-  text-align: center;
-}
-
-.sessao-texto-imagem .imagem img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-.bloco-horizontal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.bloco-horizontal .texto,
-.bloco-horizontal .imagem {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.bloco-horizontal .imagem img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-.bloco-horizontal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.bloco-horizontal .texto,
-.bloco-horizontal .imagem {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.bloco-horizontal .imagem img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-
-
-@media (max-width: 768px) {
-  .dados .grid,
-  .bloco-imagem,
-  .bloco-horizontal {
-    flex-direction: column;
-  }
-}
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: royalblue;
-}
-
+/* MENU MOBILE */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
-  nav{
-	  position:relative;
+
+  nav {
+    position: relative;
   }
 
   nav ul {
-	  display: none;
+    display: none;
     flex-direction: column;
     background: white;
     position: absolute;
@@ -253,8 +211,9 @@ nav ul li a:hover {
     padding: 1rem;
     border-radius: 0 0 0 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
   }
-    
+
   nav ul.show {
     display: flex;
   }
@@ -262,14 +221,13 @@ nav ul li a:hover {
   nav ul li {
     margin-bottom: 1rem;
   }
-}
- nav ul li a {
+
+  nav ul li a {
     color: royalblue;
     font-size: 1.2rem;
     text-shadow: none;
   }
 }
-
 
 /* RODAPÉ */
 footer {
