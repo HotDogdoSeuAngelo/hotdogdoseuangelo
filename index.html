@@ -239,6 +239,9 @@
     <div class="logo">
       <img src="logo.jpg" alt="Hot Dog do Seu Ângelo" />
     </div>
+	<div class="menu-toggle" id="menu-toggle">
+  ☰
+</div>
     <nav>
       <ul>
         <li><a href="#argumento">Por quê?</a></li>
@@ -334,6 +337,15 @@
     <p>Leve o <strong>sabor da memória</strong> e o <strong>simples bem feito</strong> pro seu time.</p>
     <a href="https://wa.me/5511988825316" target="_blank" class="btn-destaque">Agendar evento pelo WhatsApp</a>
   </section>
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+
+  toggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
+</script>
+
 
   <footer>
     <p>&copy; 2025 Hot Dog do Seu Ângelo. Todos os direitos reservados.</p>
