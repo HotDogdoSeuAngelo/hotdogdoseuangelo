@@ -11,7 +11,9 @@
   position: relative;
   color: white;
 }
-
+body {
+	background: lime;
+}
 .conteudo-banner {
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem 3rem;
@@ -206,6 +208,29 @@
 .conteudo-dados {
   position: relative;
   z-index: 2; /* fica por cima do fundo desfocado */
+}
+.conteudo-dados h2 {
+  font-size: 2.5rem;
+  color: royalblue;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dados .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 2;
+}
+
+.dados .item {
+  flex: 1;
+  min-width: 240px;
+  background: #f0f8ff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 
