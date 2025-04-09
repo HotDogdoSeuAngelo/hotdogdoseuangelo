@@ -357,9 +357,9 @@
     window.addEventListener('scroll', function () {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
-        header.classList.add('expanded');
-      } else {
         header.classList.remove('expanded');
+      } else {
+        header.classList.add('expanded');
       }
     });
 	@media (max-width: 768px) {
