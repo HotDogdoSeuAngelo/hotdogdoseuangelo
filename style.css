@@ -148,6 +148,10 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+	.dados .item {
+		margin-bottom: 1.5rem;
+	}
+  }
   }
   nav{
 	  position:relative;
