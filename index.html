@@ -303,16 +303,35 @@
   gap: 2rem;
   padding: 0 1rem;
 }
-.dados .item {
-  flex: 1;
-  min-width: 260px;
+.item-caixa {
   background: #f0f8ff;
   padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  min-width: 260px;
 }
+
+.item-caixa:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.item-caixa h3 {
+  font-size: 2.5rem;
+  color: royalblue;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.item-caixa p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
 
 .dados .item:hover {
   transform: translateY(-5px);
@@ -450,15 +469,15 @@
   <div class="conteudo-dados">
     <h2>Por que isso importa?</h2>
     <div class="grid">
-      <div class="item">
+      <div class="item-caixa">
         <h3>88%</h3>
         <p>Valorizam saúde mental no trabalho</p>
       </div>
-      <div class="item">
+      <div class="item-caixa">
         <h3>70%</h3>
         <p>Não se sentem reconhecidos pelas empresas</p>
       </div>
-      <div class="item">
+      <div class="item-caixa">
         <h3>+21%</h3>
         <p>Produtividade com ações de bem-estar</p>
       </div>
