@@ -283,28 +283,18 @@
   backdrop-filter: blur(3px);
   z-index: 1;
 }
-.conteudo-dados h2 {
+.conteudo-dados {
   position: relative;
-  display: inline-block;
-  font-size: 2.8rem;
-  color: royalblue;
-  margin-bottom: 3rem;
-  font-weight: 700;
+  z-index: 2;
+}
+
+.conteudo-dados h2 {
   text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: royalblue;
+  font-weight: 700;
 }
-
-.conteudo-dados h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 6px;
-  background: linear-gradient(90deg, royalblue, #ff9f00);
-  border-radius: 5px;
-}
-
 
 .dados .grid {
   display: flex;
