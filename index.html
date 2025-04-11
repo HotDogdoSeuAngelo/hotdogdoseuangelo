@@ -291,15 +291,18 @@
   position: relative;
   z-index: 2;
 }
-h2 {
-  text-align: center;
+.titulo-estiloso {
   color: white;
-  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 3rem;
-  text-shadow: 3px 3px 0 royalblue;
+  text-align: center;
+  font-size: 2.8rem;
 
+  /* Sombra azul pra esquerda */
+  text-shadow:
+    -2px 0px #3b5de7, /* sombra azul só pra esquerda */
+    0px 0px 0.5px #000; /* contorno preto fino */
 }
+
 .dados .grid {
   display: flex;
   flex-wrap: wrap;
@@ -444,7 +447,7 @@ h2 {
 
   <section class="bloco-horizontal">
     <div class="texto">
-      <h2>O TRADICIONAL!</h2>
+      <h2 class="titulo-estiloso">O TRADICIONAL!</h2>
       <p>Há mais de 60 anos, a gente serve mais do que hot dog: servimos memórias. Com nosso Delicioso Hot Dog ultrapassamos gerações, e agora podemos estar aí com você! </p>
     </div>
     <img src="historia.png" alt="Tradição do Hot Dog do Seu Ângelo">
@@ -452,7 +455,7 @@ h2 {
 
  <section class="bloco-horizontal">
   <div class="texto">
-    <h2>Atendimento Personalizado</h2>
+    <h2 class="titulo-estiloso">Atendimento Personalizado</h2>
     <p>Nosso colaborador estará presente no seu evento, com roupas da época e com o carrinho personalizado! Seus colaboradores vão se encher de nostalgia!</p>
   </div>
   <div class="imagem">
@@ -461,7 +464,7 @@ h2 {
 </section>
   <section class="bloco-horizontal">
 	<div class="texto">
-	<h2>Mais do que um lanche. Um gesto de cuidado!</h2>
+	<h2 class="titulo-estiloso">Mais do que um lanche. Um gesto de cuidado!</h2>
     <p class="center">Hoje, os colaboradores valorizam <strong>saúde mental</strong>, <strong>bem-estar</strong> e <strong>reconhecimento</strong>. Um evento corporativo afetivo mostra que sua empresa está conectada com o que realmente importa: <strong>as pessoas</strong>.</p>
   </section>
  
@@ -481,7 +484,7 @@ h2 {
 <section id="dados" class="dados-bg">
   <div class="overlay"></div>
   <div class="conteudo-dados">
-    <h2>Por que isso importa?</h2>
+    <h2 class="titulo-estiloso">Por que isso importa?</h2>
     <div class="grid">
       <div class="item-caixa">
         <h3>88%</h3>
@@ -500,7 +503,7 @@ h2 {
 </section>
   <section class="bloco-horizontal">
   <div class="texto">
-    <h2>O que levamos pro seu time</h2>
+    <h2 class="titulo-estiloso">O que levamos pro seu time</h2>
     <ul>
       <li>Carrinho retrô estilizado✅</li>
       <li>Hot dogs afetivos, feitos na hora✅</li>
@@ -527,7 +530,7 @@ h2 {
 	<section class="bloco-horizontal">
   <div class="texto">
   <section class="cta-final" id="orcamento">
-    <h2>Vamos valorizar quem faz sua empresa acontecer?</h2>
+    <h2 class="titulo-estiloso">Vamos valorizar quem faz sua empresa acontecer?</h2>
     <p>Leve o <strong>sabor da memória</strong> e o <strong>simples bem feito</strong> pro seu time.</p>
     <a href="https://wa.me/5511988825316" target="_blank" class="btn-destaque">Agendar evento pelo WhatsApp</a>
   </section>
