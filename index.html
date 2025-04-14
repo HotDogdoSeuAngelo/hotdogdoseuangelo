@@ -381,6 +381,26 @@
   0% { background-position: 0% center; }
   100% { background-position: 200% center; }
 }
+.btn-container {
+  all: unset; /* remove herança de estilos da section */
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-container .btn {
+  background: #3b5bfa;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 1rem;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+}
+
 
   </style>
   <script>
@@ -456,7 +476,9 @@
   <section class="hero">
     <h1>Mostre que sua empresa se importa</h1>
     <p>Leve um momento de bem-estar e carinho para seus colaboradores com o Hot Dog do Seu Ângelo.</p>
+	<div class="btn-container">
     <a href="#orcamento" class="btn">Quero agendar meu evento</a>
+	</div>
   </section>
 
   <section class="bloco-horizontal">
