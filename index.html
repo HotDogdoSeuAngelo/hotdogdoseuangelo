@@ -407,40 +407,48 @@
   font-family: 'Baloo 2', cursive;
   text-shadow: none;
 }
-.marca-destaque {
-  color: white;
-  font-size: 1.6rem;
-  font-weight: bold;
-  position: relative;
-  display: inline-block;
-  text-shadow: 1px 1px 2px #000;
-  font-family: 'Baloo 2', cursive;
+.marca-com-selo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .selo-vintage {
   width: 80px;
   height: 80px;
-  background: #f5d000;
-  border: 3px dashed #222;
+  background: royalblue;
   border-radius: 50%;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  font-family: 'Baloo 2', cursive;
-  position: relative;
-  margin: 1rem auto;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+}
+
+.selo-vintage::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-image: repeating-conic-gradient(white 0deg 10deg, royalblue 10deg 20deg);
+  z-index: -1;
 }
 
 .selo-vintage .texto {
-  text-align: center;
+  color: white;
+  font-style: italic;
   font-size: 0.75rem;
-  color: #222;
   font-weight: bold;
+  text-align: center;
   line-height: 1.2;
+  font-family: 'Baloo 2', cursive;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 
 
 
@@ -519,7 +527,15 @@
   </header>
   <section class="hero">
     <h1>Mostre que sua empresa se importa</h1>
-    <p>Leve um momento de bem-estar e carinho para seus colaboradores com o <span class="marca-destaque">Hot Dog do Seu Ângelo<div class="selo-vintage"><span class="texto">Desde<br>1963</span></span>.</div></p>
+    <p>Leve um momento de bem-estar e carinho para seus colaboradores com o 
+	<div class="marca-com-selo">
+  <h2 class="titulo-estiloso">
+    Hot Dog do Seu Ângelo
+  </h2>
+  <div class="selo-vintage">
+    <span class="texto">Desde<br>1963</span>
+  </div>
+</div>
 	<div class="caixa-azul">
     <a href="#orcamento" class="btn-destaque">Quero agendar meu evento!</a>
 	</div>
