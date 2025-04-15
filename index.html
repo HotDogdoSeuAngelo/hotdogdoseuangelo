@@ -407,46 +407,41 @@
   font-family: 'Baloo 2', cursive;
   text-shadow: none;
 }
-.marca-com-selo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.selo-vintage {
-  width: 80px;
-  height: 80px;
-  background: royalblue;
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-}
-
-.selo-vintage::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: repeating-conic-gradient(white 0deg 10deg, royalblue 10deg 20deg);
-  z-index: -1;
-}
-
-.selo-vintage .texto {
-  color: white;
-  font-style: italic;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1.2;
+.marca-banner {
   font-family: 'Baloo 2', cursive;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.marca-banner .parte-superior {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.marca-banner .parte-superior::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: royalblue;
+  border-radius: 10px;
+}
+
+.marca-banner .parte-inferior {
+  display: block;
+  color: white;
+  text-shadow:
+    1px 1px 0 royalblue,
+    -1px 1px 0 royalblue,
+    1px -1px 0 royalblue,
+    -1px -1px 0 royalblue;
+  font-size: 3.2rem;
 }
 
 
@@ -527,15 +522,11 @@
   </header>
   <section class="hero">
     <h1>Mostre que sua empresa se importa</h1>
-    <p>Leve um momento de bem-estar e carinho para seus colaboradores com o 
-	<div class="marca-com-selo">
-  <h2 class="titulo-estiloso">
-    Hot Dog do Seu Ângelo
-  </h2>
-  <div class="selo-vintage">
-    <span class="texto">Desde<br>1963</span>
-  </div>
-</div>
+    <p>Leve um momento de bem-estar e carinho para seus colaboradores com o </p>
+	<h1 class="marca-banner">
+  <span class="parte-superior">Hot Dog do</span>
+  <span class="parte-inferior">Seu Ângelo</span>
+	</h1>
 	<div class="caixa-azul">
     <a href="#orcamento" class="btn-destaque">Quero agendar meu evento!</a>
 	</div>
