@@ -447,7 +447,15 @@
   font-size: 2rem;
   color: white;
   text-shadow: 2px 2px 0 royalblue;
+	text-decoration: underline;
+  text-underline-offset: 6px;
+  animation: brilho 3s infinite alternate;
 }
+@keyframes brilho {
+  0% { text-shadow: 2px 2px 0 royalblue; }
+  100% { text-shadow: 2px 2px 5px #3b5de7; }
+}
+
   </style>
   <script>
     window.addEventListener('scroll', function () {
